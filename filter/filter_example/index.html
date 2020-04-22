@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>In-bulit filter</title>
+    <script src="angular.min.js"></script>
+    <script src="app.js"></script>
+</head>
+<body>
+    <div ng-app="FilterExample">
+        <h1>Filter Example</h1>
+        <div ng-controller="FilterExampleController">
+            Enter You Name:
+            <input type="text" ng-model="name" ng-blur="changeOnFocus()">
+            <div>
+                Your name in Uppercase: {{ name | uppercase }} <pre>&lt;!--HTML filter--&gt;</pre>
+            </div>
+            <div>Message: {{jsFilter}} </div> <pre>&lt;!--js filter--&gt;</pre>
+        </div>
+    </div>
+</body>
+</html>
