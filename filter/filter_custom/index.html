@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Filter</title>
+    <script src="angular.min.js"></script>
+    <script src="app.js"></script>
+</head>
+<body>
+    <div ng-app="CustomFilter">
+        <h1>Custom Filter</h1>
+        <div ng-controller="CustomFilterController">
+            Enter Your Email:
+            <input type="text" ng-model="email" ng-blur = "checkEmail()">
+            <div>Status: {{status}}</div>
+            <div>
+                <button ng-click="checkEmail()">Check Email</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
