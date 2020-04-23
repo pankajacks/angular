@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Binding</title>
+    <script src="angular.min.js"></script>
+    <script src="app.js"></script>
+</head>
+<body>
+    <div ng-app="DataBinding">
+        <h1>Data Binding Example</h1>
+        <div ng-controller="DataBindingController">
+            Variabl 0<input type="text" ng-model="var0" ng-blur="addVar()"><br>
+            Variable 2 is holds the addition of var0 & var1: {{::var2}} <br>
+            <button ng-click="showNumberOfWatchers()">Show Watchers</button>
+            <div>
+                <button ng-click="showVar1Log()">Show Variable 1</button>
+                <button ng-click="showVar2Log()">Show Variable 2</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
