@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filtering in Loop</title>
+    <script src="angular.min.js"></script>
+    <script src="app.js"></script>
+</head>
+<body>
+    <h1>Filter Array Exmaple</h1>
+    <h4>Open console to see the logs</h4>
+
+    <div ng-app='FilterData'>
+        <h1>Angular Example</h1>
+        <H2>Filter Product List:</H2>
+        <div ng-controller='FilterDataController'>
+            Filter by: <input type="text" ng-model='search'>
+            <ul>
+                <li ng-repeat="product in productList | filter : search">{{product}}</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

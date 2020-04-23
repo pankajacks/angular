@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loop Exmaple</title>
+    <script src="angular.min.js"></script>
+    <script src="app.js"></script>
+</head>
+<body>
+    <div ng-app="ProductList">
+        <h1>Loop Example: ng-repeat</h1>
+        <div ng-controller="ProductListController">
+            <h3>Product List:</h3>
+            <ul>
+                <li ng-repeat="product in productList">{{product}}</li>
+            </ul>
+            <!-- product list using array of objects -->
+            <ul>
+                <li ng-repeat="product in productListObj">{{product.name}} : {{product.qty}}</li>
+            </ul>
+            <!-- product list using array of objects with index-->
+            <input type="text" ng-model="productListObj[0].qty">
+            <ul>
+                <li ng-repeat="product in productListObj">{{$index+1}}. {{product.name}} : {{product.qty}}</li>
+            </ul>
+            <input type="text" ng-model="newItem" placeholder="Enter New Item">
+            <input type="text" ng-model="newItemQty" placeholder="Enter Quantity">
+            <button ng-click="addItem()">Add Item</button>
+        </div>
+    </div>
+</body>
+</html>
