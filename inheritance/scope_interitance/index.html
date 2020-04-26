@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scope Inheritance</title>
+    <script src="angular.min.js"></script>
+    <script src="app.js"></script>
+</head>
+<body>
+    <div ng-app="SIApp">
+        <h1>Scope Inheritance Example</h1>
+        <div ng-controller="SIControllerParent">
+            <div ng-controller="SIControllerChild">
+            </div>
+        </div>
+        <div ng-controller="SIControllerParent1 as SICP1">
+            Parent Val: {{SICP1.parentVal}}
+            <div ng-controller="SIControllerChild1 as SICC1">
+                Child Val: {{SICC1.parentVal}}
+            </div>
+        </div>
+    </div>
+</body>
+</html>
