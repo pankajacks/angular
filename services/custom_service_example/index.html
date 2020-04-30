@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+    <script src="angular.min.js"></script>
+    <script src="app.js"></script>
+</head>
+<body>
+    <div ng-app='ToDoList'>
+        <h1>TO DO List</h1>
+        
+        <div ng-controller='ToDoListAddController as taskAdder'>
+            <input type="text" ng-model="taskAdder.taskName">
+            <input type="date" ng-model="taskAdder.taskDateTime">
+            <button ng-click="taskAdder.addTask()">Add Task</button>
+        </div>
+        <div ng-controller='ToDoListController as showList'>
+            <ol>
+                <li ng-repeat='task in showList.tasks'>{{task.task}} Date: {{task.dtime}}
+                    <button ng-click="showList.removeTask($index)">Remove</button>
+                </li>
+            </ol>
+        </div>
+    </div>
+</body>
+</html>
